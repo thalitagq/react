@@ -1,26 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
+import LoginForm from './components/LoginForm'
+import Home from './components/Home'
+import Routes from "./components/Router"
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const user = {
+  email: "teste@user.com",
+  password: "123123",
+  nickname: "user1",
+  name: "User 1",
+  following: [
+    { name: "John Doe", avatar: "avatar.png" },
+    { name: "Jane Doe", avatar: "" },
+    { name: "Walter", avatar: "" },
+  ],
+};
+class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Routes/>
+      </div>
+    );
+  }
 }
 
 export default App;
